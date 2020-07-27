@@ -1,0 +1,70 @@
+
+<main role="main">
+
+	<div class="container mt-5">
+
+		<h1>{{ titulo }}</h1>
+
+		<!-- Contenido a convertir en imagen --> 
+
+		<div id="contenido">
+
+			<div class="row text-center">
+
+	            <div class="col-md-12">
+
+	            	<p class="lead">En <a href="https://nubecolectiva.com/" target="_blank"> Nube Colectiva </a> hablamos sobre:</p>
+
+	            </div>
+
+	        </div>
+
+			<div class="row text-center">
+			   <div class="col-md-3">
+			      <h3>Frontend</h3>
+			      <a href="https://blog.nubecolectiva.com/category/frontend/" target="_blank">
+			      <img class="img-fluid" src="assets/img/frontend.png">
+			      </a>
+			   </div>
+			   <div class="col-md-3">
+			      <h3>Backend</h3>
+			      <a href="https://blog.nubecolectiva.com/category/backend/" target="_blank">
+			      <img class="img-fluid" src="assets/img/backend.png">
+			      </a>
+			   </div>
+			   <div class="col-md-3">
+			      <h3>Android</h3>
+			      <a href="https://blog.nubecolectiva.com/category/android/" target="_blank">
+			      <img class="img-fluid" src="assets/img/android.png">
+			      </a>
+			   </div>
+			   <div class="col-md-3">
+			      <h3>Otros</h3>
+			      <a href="https://blog.nubecolectiva.com/category/articulos/" target="_blank">
+			      <img class="img-fluid" src="assets/img/otros.png">
+			      </a>
+			   </div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary mt-3 mb-5" (click)="crearImagen()">Crear Imagen</button>				
+
+		<!-- Imagen Creada --> 
+		<ng-container *ngIf="imgcreada === true;">
+			<div align="center">
+				<!-- Imagen Creada -->
+				<h4>Imagen Creada:</h4>
+				<img src={{imagenCreada}}>
+
+				<!-- Botón para descargar la imagen creada -->
+
+				<a type="button" class="btn btn-success mt-3" href="{{imagenCreada}}" download>	
+					Descargar
+				</a>
+				<br><br>
+			</div>
+		</ng-container>
+
+	</div>
+
+</main>
