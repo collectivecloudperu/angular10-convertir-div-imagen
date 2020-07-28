@@ -51,18 +51,21 @@
 
 		<!-- Imagen Creada --> 
 		<ng-container *ngIf="imgcreada === true;">
-			<div align="center">
+			
+      <div align="center">
+        
 				<!-- Imagen Creada -->
 				<h4>Imagen Creada:</h4>
 				<img src={{imagenCreada}}>
-
-				<!-- Botón para descargar la imagen creada -->
-
-				<a type="button" class="btn btn-success mt-3" href="{{imagenCreada}}" download>	
-					Descargar
-				</a>
-				<br><br>
 			</div>
+      
+      <!-- Botón para descargar la imagen creada -->
+      <div class="row">
+    	  <a type="button" class="btn btn-success mt-3 mx-auto d-block" href="{{imagenCreada}}" download> 
+	        Descargar
+	      </a>
+      </div>
+      
 		</ng-container>
 
 	</div>
